@@ -39,6 +39,8 @@ class ApplicationController < Sinatra::Base
 
   delete '/recipes/:id' do
     @recipe = current_post(params[:id])
+    @recipe.delete
+    redirect to '/recipes'
   end
 
   helpers do
