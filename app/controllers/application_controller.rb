@@ -28,13 +28,13 @@ class ApplicationController < Sinatra::Base
     erb :edit
   end
 
-  patch '/recipes/:id/' do
+  patch '/recipes/:id' do
     @recipe = current_post(params[:id])
     @recipe.name = params[:name]
     @recipe.ingredients = params[:ingredients]
     @recipe.cook_time = params[:cook_time]
     @recipe.save
-    redirect to "/recipes/#{params[:id]}"
+    redirect to "/recipes/#{@recipe.id}"
   end
 
   helpers do
