@@ -5,7 +5,7 @@
   <%=@recipe.cook_time%><br>
 </p>
 
-<form method="POST" action="/post/:id">
+<form method="POST" action="/recipes/:id">
   <input id="hidden" type="hidden" name="_method" value="patch">
   <input type="text" value="name" placeholder="New Name">
   <input type="text" value="ingredients" placeholder="New Ingredients">
