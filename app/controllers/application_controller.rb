@@ -39,7 +39,7 @@ class ApplicationController < Sinatra::Base
 
   helpers do
 		def current_post(id_param)
-			Recipe.find(params[:user_id])
+			Recipe.find_by_id(id_param)
 		end
 	end
 end
